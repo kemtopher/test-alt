@@ -181,7 +181,7 @@
       {{ content_for_layout }}
     </main>
 
-    {% section 'footer' %}
+    {% comment %} {% section 'footer' %} {% endcomment %}
 
     <div id="slideshow-info" class="visually-hidden" aria-hidden="true">
       {{- 'sections.slideshow.navigation_instructions' | t -}}

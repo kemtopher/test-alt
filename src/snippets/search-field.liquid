@@ -1,7 +1,7 @@
 <style>
 .search-bar__input {
     border-radius: 30px;
-    margin-right: 40px;
+    max-width: 193px;
 }
 </style>
 
@@ -10,7 +10,7 @@
         <input
         type="text"
         name="q"
-        placeholder=""
+        placeholder="{{ 'general.search.placeholder' | t }}"
         role="combobox"
         aria-autocomplete="list"
         aria-owns="predictive-search-results"

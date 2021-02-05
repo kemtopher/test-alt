@@ -105,9 +105,12 @@
                   <li class="linklist-link">
                     <a href="{{ link.url }}">{{ link.title }}</a>
                   </li>
-                  <li>|</li>
-                {% endfor %}
 
+                  {% unless forloop.last %}
+                    <li>|</li>
+                  {% endunless %}
+
+                {% endfor %}
                 </ul>
               </div>
             </div>

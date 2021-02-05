@@ -33,13 +33,21 @@
 <div class="cust-acct-menu">
     <h4 class="cust-acct-header">My Account</h4>
     <ul class="cust-acct-list">
-    {% if customer %}
-    <li>Sign out</li>
-    {% else %}
-    <li>Sign in</li>
-    <li><span>or</span></li>
-    <li>Sign up</li>
-    {% endif %}
+        {%- if customer -%}
+            <li>
+                <a href="/account">Account</a>
+            </li>
+            <li>
+                {{ 'Sign out' | customer_logout_link }}
+            </li>
+            {%- else -%}
+            <li>
+                {{ 'Sign in' | customer_login_link }}
+            </li>
+            <li>
+                {{ 'Sign up' | customer_register_link }}
+            </li>
+        {%- endif -%}
     </ul>
 </div>
 {% endif %}
